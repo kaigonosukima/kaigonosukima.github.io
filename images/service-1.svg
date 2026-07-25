@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4E9E4"/>
+      <stop offset="1" stop-color="#EDE0E4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <text x="50%" y="48%" text-anchor="middle" dominant-baseline="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="40" fill="#9A7B82">介護付き旅行サービス</text>
+  <text x="50%" y="58%" text-anchor="middle" dominant-baseline="middle" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="20" fill="#B9A2A8">画像を差し替えてください</text>
+</svg>

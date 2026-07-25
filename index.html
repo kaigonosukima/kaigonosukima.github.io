@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>かいごのスキマ｜保険外介護サービス（介護付き旅行・訪問介護・病院付き添い）</title>
+  <meta name="description" content="「制度の外側にも、必要な支援がある」─その信念のもと、介護付き旅行（ユニバーサルツーリズム）の同行支援、在宅個別ケア、外出支援などを手がける保険外介護サービス「かいごのスキマ」。川崎市・横浜市・東京都内に対応。">
+
+  <!-- Google Fonts: 見出し用の明朝体(Zen Old Mincho)と本文用(Noto Sans JP) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+<!-- ============================================================
+     HEADER(ナビゲーション)
+     ▼メニューの文言を変えたいときはここを編集してください
+     リンク先(href="#〜")はページ内の各セクションにつながっています
+============================================================ -->
+<header class="header">
+  <div class="header__inner">
+    <!-- サイト名(テキストロゴ) -->
+    <a href="#top" class="header__logo">かいごのスキマ</a>
+
+    <!-- ハンバーガーボタン(スマホ用) -->
+    <button class="header__hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="globalNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="header__nav" id="globalNav">
+      <ul class="nav__list">
+        <li><a href="#top" class="nav__link">トップ</a></li>
+        <li><a href="#concept" class="nav__link">コンセプト</a></li>
+        <!-- サービス紹介(ドロップダウン) -->
+        <li class="nav__item--dropdown">
+          <a href="#service" class="nav__link nav__link--dropdown">サービス紹介<span class="nav__arrow" aria-hidden="true"></span></a>
+          <ul class="nav__dropdown">
+            <li><a href="#service-travel">介護付き旅行サービス</a></li>
+            <li><a href="#service-homecare">訪問介護サービス</a></li>
+            <li><a href="#service-hospital">病院への付き添いサービス</a></li>
+            <li><a href="#service-wedding">結婚式付き添いサービス</a></li>
+          </ul>
+        </li>
+        <li><a href="#flow" class="nav__link">ご利用の流れ</a></li>
+        <li><a href="price.html" class="nav__link">料金体系</a></li>
+        <li><a href="#faq" class="nav__link">よくあるご質問</a></li>
+        <li><a href="#message" class="nav__link">代表挨拶</a></li>
+        <li><a href="recruit.html" class="nav__link">求人</a></li>
+        <li class="nav__cta"><a href="#contact" class="btn btn--accent btn--nav">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     HERO(メインビジュアル)
+     ▼キャッチコピー・サブ文はここを編集してください
+     背景画像を差し替える場合は images フォルダに hero.jpg と
+     同名で置き換えるか、下の src="images/hero.jpg" を変更します
+============================================================ -->
+<section class="hero" id="hero">
+  <div class="hero__bg">
+    <img src="images/hero.jpg" alt="まごころを込めた介護サービスのイメージ">
+  </div>
+  <div class="hero__content fade-in">
+    <h1 class="hero__catch">
+      <span class="hero__catch-line1">介護のスキマに、</span><br>
+      <span class="hero__catch-line2">まごころを。</span>
+    </h1>
+    <p class="hero__sub">
+      介護離職を、起こさせない社会へ。<br>
+      介護保険だけでは届かない時間や場面にも、柔軟に対応できる。<br>
+      働く人にも、支える人にも、心に余裕を持てるサポートを。
+    </p>
+    <div class="hero__buttons">
+      <a href="#contact" class="btn btn--accent">お問い合わせ</a>
+      <a href="#service" class="btn btn--outline">サービスを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     サービスカテゴリチップ(ヒーロー直下の丸アイコン付きリンク)
+     ▼チップの文言はここを編集してください
+============================================================ -->
+<section class="chips fade-in">
+  <div class="chips__inner">
+    <a href="#service-travel" class="chip">
+      <span class="chip__icon" aria-hidden="true">
+        <!-- 旅行(スーツケース)アイコン -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M9 12v4M15 12v4"/></svg>
+      </span>
+      <span class="chip__label">介護付き旅行</span>
+    </a>
+    <a href="#service-homecare" class="chip">
+      <span class="chip__icon" aria-hidden="true">
+        <!-- 家アイコン -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+      </span>
+      <span class="chip__label">訪問介護</span>
+    </a>
+    <a href="#service-hospital" class="chip">
+      <span class="chip__icon" aria-hidden="true">
+        <!-- 病院(十字)アイコン -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg>
+      </span>
+      <span class="chip__label">病院付き添い</span>
+    </a>
+    <a href="#service-wedding" class="chip">
+      <span class="chip__icon" aria-hidden="true">
+        <!-- 結婚式(ハート)アイコン -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.9-10-9.5C.5 7 2.5 3.5 6 3.5c2.2 0 3.6 1.2 4.4 2.4L12 8l1.6-2.1c.8-1.2 2.2-2.4 4.4-2.4 3.5 0 5.5 3.5 4 7-2.5 4.6-10 9.5-10 9.5z"/></svg>
+      </span>
+      <span class="chip__label">結婚式付き添い</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT(コンセプト)
+     ▼コンセプト文はここを編集してください
+============================================================ -->
+<section class="section section--white" id="concept">
+  <div class="section__inner">
+    <div class="section__head fade-in">
+      <p class="section__label">ABOUT</p>
+      <h2 class="section__title">
+        <span>介護離職を“止める”のではなく、</span><br>
+        <span class="section__title-accent">“起こさせない”地域の仕組みづくりへ。</span>
+      </h2>
+    </div>
+
+    <div class="about__lead fade-in">
+      <p>介護のために仕事をあきらめる。そんな選択を、誰にもさせたくない。</p>
+      <p>介護を理由に仕事を諦めずに済む環境、頼れるサービスが身近にある地域、そして介護職が誇りをもって働ける社会。そうした未来の実現に向けて、一人の介護士として挑戦しています。</p>
+      <p>介護は「家庭の中だけで抱えるもの」ではなく、「地域みんなで支えるもの」。制度の谷間に落ちた人をすくい上げ、地域全体で「支え合える社会」の土台を築いていきたいと考えています。</p>
+    </div>
+
+    <!-- ▼「このような時にご相談ください」特徴4点 -->
+    <h3 class="about__subtitle fade-in">このような時にご相談ください</h3>
+    <p class="about__note fade-in">介護保険では提供できないサービスを安心してご利用いただけます。</p>
+    <div class="about__features">
+      <div class="feature-card fade-in">
+        <span class="feature-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0 1 12 6.5 5.5 5.5 0 0 1 21.5 12C19 16.4 12 21 12 21z"/></svg>
+        </span>
+        <h4 class="feature-card__title">制度外の困りごとに</h4>
+        <p class="feature-card__text">介護保険では対応できない日常の困りごとがあるとき、柔軟にお手伝いします。</p>
+      </div>
+      <div class="feature-card fade-in">
+        <span class="feature-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        </span>
+        <h4 class="feature-card__title">時間・回数の制限に</h4>
+        <p class="feature-card__text">ヘルパーを利用できる時間帯や回数に制限があるときも、保険外だから対応できます。</p>
+      </div>
+      <div class="feature-card fade-in">
+        <span class="feature-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8a5 5 0 1 0-10 0c0 4-2 5-2 5h14s-2-1-2-5"/><path d="M10 17a2 2 0 0 0 4 0"/></svg>
+        </span>
+        <h4 class="feature-card__title">ご本人・ご家族の希望に</h4>
+        <p class="feature-card__text">ご本人やご家族の希望に柔軟に応えたいとき、オーダーメイドの支援をご提案します。</p>
+      </div>
+      <div class="feature-card fade-in">
+        <span class="feature-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        </span>
+        <h4 class="feature-card__title">急なトラブル・入退院に</h4>
+        <p class="feature-card__text">入退院時や急なトラブルへの対応が必要なときも、まずはご相談ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALLERY(活動の様子)
+     ▼写真を差し替える場合は images フォルダの gallery-1.svg 〜
+     gallery-6.svg を同名で置き換えてください
+============================================================ -->
+<section class="section" id="gallery">
+  <div class="section__inner">
+    <div class="section__head fade-in">
+      <p class="section__label">GALLERY</p>
+      <h2 class="section__title">
+        <span>一人ひとりの想いに</span><br>
+        <span class="section__title-accent">寄り添う場面</span>
+      </h2>
+    </div>
+    <div class="gallery__grid">
+      <figure class="gallery__item fade-in"><img src="images/gallery-1.svg" alt="旅行付き添いの様子"><figcaption>旅行付き添い</figcaption></figure>
+      <figure class="gallery__item fade-in"><img src="images/gallery-2.svg" alt="外出支援の様子"><figcaption>外出支援</figcaption></figure>
+      <figure class="gallery__item fade-in"><img src="images/gallery-3.svg" alt="通院付き添いの様子"><figcaption>通院付き添い</figcaption></figure>
+      <figure class="gallery__item fade-in"><img src="images/gallery-4.svg" alt="在宅ケアの様子"><figcaption>在宅ケア</figcaption></figure>
+      <figure class="gallery__item fade-in"><img src="images/gallery-5.svg" alt="イベント付き添いの様子"><figcaption>イベント付き添い</figcaption></figure>
+      <figure class="gallery__item fade-in"><img src="images/gallery-6.svg" alt="日常生活支援の様子"><figcaption>日常生活支援</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICE(サービス紹介 4カード)
+     ▼各サービスの説明文・料金はここを編集してください
+     画像を差し替える場合は images フォルダの各画像ファイル
+     (service-1.jpg / service-2.jpg / service-3.svg /
+      service-wedding.svg)を同名で置き換えてください
+============================================================ -->
+<section class="section section--white" id="service">
+  <div class="section__inner">
+    <div class="section__head fade-in">
+      <p class="section__label">SERVICE</p>
+      <h2 class="section__title">
+        <span>かいごのスキマの</span><br>
+        <span class="section__title-accent">サービス紹介</span>
+      </h2>
+    </div>
+
+    <div class="service__list">
+
+      <!-- ── サービス1: 介護付き旅行サービス ── -->
+      <article class="service-card fade-in" id="service-travel">
+        <div class="service-card__img"><img src="images/service-1.jpg" alt="介護付き旅行サービス：車いすの方とのお出かけの様子"></div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">介護付き旅行サービス</h3>
+          <p class="service-card__text">
+            有資格者の介護スタッフが同行し、移動や宿泊をサポート。車いす対応の宿泊施設や観光地のご提案から旅行計画まで、ご家族様も一緒に楽しめる旅をお手伝いします。視覚障害や肢体不自由のある方の「旅をしたい」という夢も、ユニバーサルツーリズムの専門的な知見でサポート。画一的なパッケージツアーではなく、お客様のご希望や身体状況に合わせたオーダーメイドの旅をご提案します。
+          </p>
+          <p class="service-card__price"><span class="service-card__price-label">料金</span>4,000円（税込）〜 / 時間<span class="service-card__price-note">（別途交通費）</span></p>
+        </div>
+      </article>
+
+      <!-- ── サービス2: 訪問介護サービス ── -->
+      <article class="service-card service-card--reverse fade-in" id="service-homecare">
+        <div class="service-card__img"><img src="images/service-2.jpg" alt="訪問介護サービス：利用者様との外食サポートの様子"></div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">訪問介護サービス</h3>
+          <p class="service-card__text">
+            訪問介護ヘルパーがご自宅を訪問し、日常生活をサポートします。食事介助・排泄介助などの介護サービス、杖歩行・車椅子介助などの移動サービス、料理・洗濯などの家事サービスに対応。買い物の代行、外出の付き添い、お話し相手、ペットの世話、認知症の方の見守りなども組み合わせられます。初回訪問時にご本人様・ご家族様のご希望を丁寧にお伺いし、適切な支援をご提案します。
+          </p>
+          <p class="service-card__price"><span class="service-card__price-label">料金</span>4,000円（税込）〜 / 時間<span class="service-card__price-note">（別途交通費）</span></p>
+        </div>
+      </article>
+
+      <!-- ── サービス3: 病院への付き添いサービス ── -->
+      <article class="service-card fade-in" id="service-hospital">
+        <div class="service-card__img"><img src="images/service-3.svg" alt="病院への付き添いサービス"></div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">病院への付き添いサービス</h3>
+          <p class="service-card__text">
+            ご自宅と病院の往復、時間のよめない診察、受診時のお医者さんから伺ったお話など、ご一緒させていただきご様子をお伝えします。外来受診時の同行、院内での移動介助、診察の立ち会い、医師や看護師からの説明の記録、薬の受け取りにも対応。入院時・入院中・一時退院時の身のまわりのお世話も、ご家族に代わってお手伝いします。
+          </p>
+          <p class="service-card__price"><span class="service-card__price-label">料金</span>3,500円（税込）/ 時間<span class="service-card__price-note">（別途交通費）</span></p>
+        </div>
+      </article>
+
+      <!-- ── サービス4: 結婚式付き添いサービス ── -->
+      <article class="service-card service-card--reverse fade-in" id="service-wedding">
+        <div class="service-card__img"><img src="images/service-wedding.svg" alt="結婚式付き添いサービス"></div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">結婚式付き添いサービス</h3>
+          <p class="service-card__text">
+            「お子様やお孫様の結婚式に出席したい」──体調や移動への不安から、大切な一日をあきらめかけていませんか。ご自宅から式場までの移動、会場内での車いす介助やお手洗いの介助、披露宴中のさりげない見守り・体調確認、お食事のサポートまで、介護のプロが晴れの日にまごころを込めて付き添います。ご本人様にもご家族様にも、安心して式に集中していただけます。前撮りやご親族としての参列にも対応します。
+          </p>
+          <p class="service-card__price"><span class="service-card__price-label">料金</span>4,000円（税込）/ 時間<span class="service-card__price-note">（別途交通費）</span></p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FLOW(ご利用の流れ 4ステップ)
+     ▼各ステップの文言はここを編集してください
+============================================================ -->
+<section class="section" id="flow">
+  <div class="section__inner">
+    <div class="section__head fade-in">
+      <p class="section__label">FLOW</p>
+      <h2 class="section__title">
+        <span>ご利用の</span><span class="section__title-accent">流れ</span>
+      </h2>
+    </div>
+    <ol class="flow__list">
+      <li class="flow-step fade-in">
+        <span class="flow-step__num">01</span>
+        <h3 class="flow-step__title">お問い合わせ</h3>
+        <p class="flow-step__text">お問い合わせフォームよりご連絡ください。お電話でのご相談も承ります。</p>
+      </li>
+      <li class="flow-step fade-in">
+        <span class="flow-step__num">02</span>
+        <h3 class="flow-step__title">ご契約・ご予約</h3>
+        <p class="flow-step__text">サービス内容をご確認いただき、ご契約・ご利用日のご予約をしていただきます。</p>
+      </li>
+      <li class="flow-step fade-in">
+        <span class="flow-step__num">03</span>
+        <h3 class="flow-step__title">サービスのご利用</h3>
+        <p class="flow-step__text">ご訪問・外出などサービスをご利用いただきます。</p>
+      </li>
+      <li class="flow-step fade-in">
+        <span class="flow-step__num">04</span>
+        <h3 class="flow-step__title">お支払い</h3>
+        <p class="flow-step__text">現金・クレジットカード・銀行振込のいずれかにてお願いします。</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRICE(料金表)
+     ▼料金を変更するときはここを編集してください
+============================================================ -->
+<section class="section section--white" id="price">
+  <div class="section__inner">
+    <div class="section__head fade-in">
+      <p class="section__label">PRICE</p>
+      <h2 class="section__title">
+        <span>料金の</span><span class="section__title-accent">ご案内</span>
+      </h2>
+    </div>
+
+    <div class="price__table-wrap fade-in">
+      <table class="price__table">
+        <thead>
+          <tr><th>サービス</th><th>料金（税込）</th><th>備考</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>介護付き旅行サービス</td><td>4,000円〜 / 時間</td><td>別途交通費</td></tr>
+          <tr><td>訪問介護サービス</td><td>4,000円〜 / 時間</td><td>別途交通費</td></tr>
+          <tr><td>病院への付き添いサービス</td><td>3,500円 / 時間</td><td>別途交通費</td></tr>
+          <tr><td>結婚式付き添いサービス</td><td>4,000円 / 時間</td><td>別途交通費</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="price__note fade-in">
+      ※上記は概算です。サービスの内容や時間帯によって料金が異なります。<br>
+      個別のニーズに合わせてオーダーメイドなプランをご提案いたします。詳しくはお問い合わせください。
+    </p>
+    <!-- ▼料金体系の詳細ページへのボタン -->
+    <div class="price__more fade-in">
+      <a href="price.html" class="btn btn--accent">詳しい料金体系はこちら</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     AREA(対応地域)
+     ▼対応地域を変更するときはここを編集してください
+============================================================ -->
+<section class="section" id="area">
+  <div class="section__inner">
+    <div class="section__head fade-in">
+      <p class="section__label">AREA</p>
+      <h2 class="section__title">
+        <span>対応</span><span class="section__title-accent">地域</span>
+      </h2>
+    </div>
+    <div class="area__card fade-in">
+      <p class="area__main">川崎市・横浜市・東京都内</p>
+      <p class="area__note">※近隣エリアも対応可能な場合があります。お気軽にご相談ください。<br>
+      事業所所在地：川崎市 ※ヘルパーは都内もしくは都内近郊から伺います</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MESSAGE(代表挨拶)
+     ▼挨拶文はここを編集してください
+     代表写真を差し替える場合は images/representative.jpg を
+     同名で置き換えてください
+============================================================ -->
+<section class="section section--white" id="message">
+  <div class="section__inner">
+    <div class="section__head fade-in">
+      <p class="section__label">MESSAGE</p>
+      <h2 class="section__title">
+        <span>代表</span><span class="section__title-accent">挨拶</span>
+      </h2>
+    </div>
+    <div class="message__wrap">
+      <div class="message__photo fade-in">
+        <img src="images/representative.jpg" alt="代表 逢坂忠士の写真">
+        <p class="message__name">代表　逢坂 忠士</p>
+      </div>
+      <div class="message__body fade-in">
+        <p>はじめまして。「かいごのスキマ」代表の逢坂です。</p>
+        <p>私は、20年間勤めた一部上場企業において、「食」や「命」に関わる事業に従事してきました。その中で介護事業での、買収や経営合理化によって入居者の生活や命が影響を受ける現実に直面し、強い違和感と問題意識を持つようになりました。</p>
+        <p>その後、介護の現場に飛び込み、グループホームや小規模多機能施設で3年以上の経験を積み、介護福祉士を取得しました。制度だけでは支えきれない「ちょっと困った」という声に応えたいという思いから、現在はフリーランスの介護士として活動しています。</p>
+        <p>介護保険外サービスでは、会社役員の出社支援や社内付き添い、富裕層のプライベートヘルパーなど多様なご依頼をいただいており、お客様それぞれの暮らしに合わせたオーダーメイドな支援を行っています。柔軟で安心できる関わりが、介護離職の防止やご家族の心身の負担軽減にもつながると信じています。</p>
+        <p>私は、介護保険制度の「スキマ」にこそ、切実なニーズがあると確信しています。そして、制度に縛られず、お一人おひとりに寄り添うケアを届けることが、この仕事の本質だと考えています。</p>
+        <p>「いざというときに、頼れる存在がいる」<br>そんな安心を、地域の中に根付かせていくことが私の願いです。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Q&A(よくあるご質問 アコーディオン)
+     ▼質問・回答はここを編集してください
+     質問を増やす場合は <div class="faq-item">〜</div> のかたまりを
+     コピーして追加してください
+============================================================ -->
+<section class="section" id="faq">
+  <div class="section__inner section__inner--narrow">
+    <div class="section__head fade-in">
+      <p class="section__label">Q&amp;A</p>
+      <h2 class="section__title">
+        <span>よくある</span><span class="section__title-accent">ご質問</span>
+      </h2>
+    </div>
+
+    <div class="faq__list">
+      <div class="faq-item fade-in">
+        <button class="faq-item__q" type="button" aria-expanded="false">
+          <span class="faq-item__mark">Q</span>介護認定を受けていなくても利用できますか？
+          <span class="faq-item__toggle" aria-hidden="true"></span>
+        </button>
+        <div class="faq-item__a">
+          <p><span class="faq-item__mark faq-item__mark--a">A</span>はい。介護認定を受けていない方や年齢に関わらずご利用できます。</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-item__q" type="button" aria-expanded="false">
+          <span class="faq-item__mark">Q</span>支払い方法を教えてください
+          <span class="faq-item__toggle" aria-hidden="true"></span>
+        </button>
+        <div class="faq-item__a">
+          <p><span class="faq-item__mark faq-item__mark--a">A</span>現金払い、クレジットカード払い、銀行振込で対応させていただいております。</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-item__q" type="button" aria-expanded="false">
+          <span class="faq-item__mark">Q</span>予約のキャンセルはできますか？
+          <span class="faq-item__toggle" aria-hidden="true"></span>
+        </button>
+        <div class="faq-item__a">
+          <p><span class="faq-item__mark faq-item__mark--a">A</span>はい。キャンセルする場合は必ずご連絡をお願いいたします。<br>
+          当日キャンセル 100％<br>
+          前日17時以降キャンセル 50％</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-item__q" type="button" aria-expanded="false">
+          <span class="faq-item__mark">Q</span>直前の依頼も対応可能ですか？
+          <span class="faq-item__toggle" aria-hidden="true"></span>
+        </button>
+        <div class="faq-item__a">
+          <p><span class="faq-item__mark faq-item__mark--a">A</span>はい。ヘルパーが手配できる場合、承ります。<br>
+          ・ご利用希望日時の24時間前 料金の60％増し<br>
+          ・ご利用希望日時の48時間前 料金の30％増し</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-item__q" type="button" aria-expanded="false">
+          <span class="faq-item__mark">Q</span>対応できないことはありますか？
+          <span class="faq-item__toggle" aria-hidden="true"></span>
+        </button>
+        <div class="faq-item__a">
+          <p><span class="faq-item__mark faq-item__mark--a">A</span>はい。他の資格を有するもの（医療行為や理容行為など）、専門的な知識を要するものはできかねます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT(お問い合わせフォーム)
+     ▼案内文・項目名はここを編集してください
+     【フォーム送信の設定方法】
+     このフォームは静的サイトのため、そのままでは送信されません。
+     実際に受信するには次のいずれかに差し替えてください。
+       方法1: Googleフォームを作成し、このセクションのform全体を
+              Googleフォームの「埋め込みHTML」(iframe)に置き換える
+       方法2: formspree.io などのフォーム送信サービスに登録し、
+              下の action="#" を action="https://formspree.io/f/あなたのID"
+              method="POST" に書き換える
+============================================================ -->
+<section class="section section--white" id="contact">
+  <div class="section__inner section__inner--narrow">
+    <div class="section__head fade-in">
+      <p class="section__label">CONTACT</p>
+      <h2 class="section__title">
+        <span>お問い</span><span class="section__title-accent">合わせ</span>
+      </h2>
+    </div>
+
+    <p class="contact__lead fade-in">
+      当ホームページをご覧いただき、ありがとうございます。<br>
+      お問い合わせの方は、下記のフォームに必要事項をご入力いただき、送信してください。<br>
+      お問い合わせ内容を確認させていただき、数日以内にメールにてご返信いたします。
+    </p>
+    <p class="contact__required-note fade-in"><span class="required">必須</span> は入力必須です</p>
+
+    <form class="contact__form fade-in" action="#" method="post">
+      <div class="form-row">
+        <label for="name" class="form-row__label">お名前<span class="required">必須</span></label>
+        <input type="text" id="name" name="name" required autocomplete="name" placeholder="例）介護 太郎">
+      </div>
+      <div class="form-row">
+        <label for="furigana" class="form-row__label">ふりがな</label>
+        <input type="text" id="furigana" name="furigana" placeholder="例）かいご たろう">
+      </div>
+      <div class="form-row">
+        <label for="address" class="form-row__label">ご住所</label>
+        <input type="text" id="address" name="address" autocomplete="street-address" placeholder="例）東京都港区〇〇1-2-3">
+      </div>
+      <div class="form-row">
+        <label for="tel" class="form-row__label">お電話<span class="required">必須</span></label>
+        <input type="tel" id="tel" name="tel" required autocomplete="tel" placeholder="例）090-0000-0000">
+      </div>
+      <div class="form-row">
+        <label for="email" class="form-row__label">メールアドレス<span class="required">必須</span></label>
+        <input type="email" id="email" name="email" required autocomplete="email" placeholder="例）example@example.com">
+      </div>
+      <div class="form-row">
+        <label for="body" class="form-row__label">お問い合わせ内容<span class="required">必須</span></label>
+        <textarea id="body" name="body" rows="6" required placeholder="ご希望のサービスやご相談内容をご記入ください"></textarea>
+      </div>
+      <div class="contact__submit">
+        <button type="submit" class="btn btn--accent btn--large">送信する</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTAバンド(お電話・メール)
+     ▼電話番号・メールアドレスを変更するときはここを編集してください
+============================================================ -->
+<section class="cta-band">
+  <div class="cta-band__inner fade-in">
+    <h2 class="cta-band__title">まずはお気軽にご相談ください</h2>
+    <p class="cta-band__text">介護保険では届かない「ちょっと助けて」に、まごころでお応えします。</p>
+    <div class="cta-band__buttons">
+      <a href="tel:09054344573" class="btn btn--white btn--large">
+        <span class="cta-band__tel-label">お電話でのご相談</span>
+        <span class="cta-band__tel-number">090-5434-4573</span>
+      </a>
+      <a href="mailto:watami783@gmail.com" class="btn btn--outline-white btn--large">メールで相談する</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER(フッター)
+     ▼フッターのメニュー・リンクはここを編集してください
+============================================================ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <p class="footer__logo">かいごのスキマ</p>
+    <p class="footer__area">対応地域：川崎市・横浜市・東京都内</p>
+    <nav class="footer__nav" aria-label="フッターメニュー">
+      <a href="#top">トップ</a>
+      <a href="#concept">コンセプト</a>
+      <a href="#service">サービス紹介</a>
+      <a href="#flow">ご利用の流れ</a>
+      <a href="price.html">料金体系</a>
+      <a href="#faq">よくあるご質問</a>
+      <a href="#message">代表挨拶</a>
+      <a href="recruit.html">求人</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+    <!-- Facebookリンク -->
+    <a href="https://www.facebook.com/tadashi.osaka.9" class="footer__sns" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.5-3.92 3.78-3.92 1.1 0 2.24.2 2.24.2v2.47H15.2c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.9h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg>
+      <span>Facebook</span>
+    </a>
+    <p class="footer__copy">&copy; かいごのスキマ</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     右下の固定フローティングボタン
+     ▼「LINEで相談」を使う場合は、下の href="#contact" を
+     あなたのLINE公式アカウントのURL(https://lin.ee/〜)に
+     書き換えてください ※現在は仮リンク(お問い合わせに移動)です
+============================================================ -->
+<div class="floating-cta">
+  <!-- ※仮文言・仮リンク: LINE公式アカウント開設後にURLを差し替えてください -->
+  <a href="#contact" class="floating-cta__btn floating-cta__btn--line">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.48 3 2 6.64 2 11.1c0 3.99 3.54 7.33 8.32 7.97.32.07.77.21.88.49.1.25.07.65.03.9l-.14.86c-.04.25-.2 1 .87.54 1.07-.45 5.77-3.4 7.87-5.82C21.28 14.5 22 12.9 22 11.1 22 6.64 17.52 3 12 3z"/></svg>
+    <span>LINEで相談</span>
+  </a>
+  <a href="#contact" class="floating-cta__btn floating-cta__btn--contact">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+    <span>お問い合わせ</span>
+  </a>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

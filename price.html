@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>料金体系｜かいごのスキマ（保険外介護サービス）</title>
+  <meta name="description" content="保険外介護サービス「かいごのスキマ」の料金体系のご案内。訪問介護・介護付き旅行4,000円（税込）〜/時間、病院への付き添い3,500円（税込）/時間。入会金・登録料なし、必要なときに必要な分だけご利用いただけます。川崎市・横浜市・東京都内に対応。">
+
+  <!-- Google Fonts: 見出し用の明朝体(Zen Old Mincho)と本文用(Noto Sans JP) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+<!-- ============================================================
+     HEADER(ナビゲーション)
+     ▼メニューの文言を変えたいときはここを編集してください
+     トップページの各セクションへは index.html#〜 でつながっています
+============================================================ -->
+<header class="header">
+  <div class="header__inner">
+    <!-- サイト名(テキストロゴ) -->
+    <a href="index.html" class="header__logo">かいごのスキマ</a>
+
+    <!-- ハンバーガーボタン(スマホ用) -->
+    <button class="header__hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="globalNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="header__nav" id="globalNav">
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link">トップ</a></li>
+        <li><a href="index.html#concept" class="nav__link">コンセプト</a></li>
+        <!-- サービス紹介(ドロップダウン) -->
+        <li class="nav__item--dropdown">
+          <a href="index.html#service" class="nav__link nav__link--dropdown">サービス紹介<span class="nav__arrow" aria-hidden="true"></span></a>
+          <ul class="nav__dropdown">
+            <li><a href="index.html#service-travel">介護付き旅行サービス</a></li>
+            <li><a href="index.html#service-homecare">訪問介護サービス</a></li>
+            <li><a href="index.html#service-hospital">病院への付き添いサービス</a></li>
+            <li><a href="index.html#service-wedding">結婚式付き添いサービス</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#flow" class="nav__link">ご利用の流れ</a></li>
+        <li><a href="price.html" class="nav__link is-current" aria-current="page">料金体系</a></li>
+        <li><a href="index.html#faq" class="nav__link">よくあるご質問</a></li>
+        <li><a href="index.html#message" class="nav__link">代表挨拶</a></li>
+        <li><a href="recruit.html" class="nav__link">求人</a></li>
+        <li class="nav__cta"><a href="index.html#contact" class="btn btn--accent btn--nav">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     ページヒーロー(料金体系)
+     ▼見出し・リード文はここを編集してください
+============================================================ -->
+<section class="page-hero" id="price-hero">
+  <div class="section__inner fade-in">
+    <p class="section__label">PRICE</p>
+    <h1 class="section__title">
+      <span>わかりやすく、</span><br>
+      <span class="section__title-accent">安心できる料金体系。</span>
+    </h1>
+    <p class="page-hero__lead">
+      「かいごのスキマ」は、入会金・登録料をいただかない保険外介護サービスです。<!-- ※仮の数値です。要確認（入会金・登録料0円の扱い） --><br>
+      必要なときに、必要な分だけ。介護保険の枠にとらわれない、<br class="pc-only">
+      オーダーメイドの支援をご利用いただけます。
+    </p>
+    <div class="page-hero__buttons">
+      <!-- ※仮リンク: LINE公式アカウント開設後にURL(https://lin.ee/〜)へ差し替えてください -->
+      <a href="#contact-cta" class="btn btn--accent">LINEで相談する</a>
+      <a href="tel:09054344573" class="btn btn--outline">電話で相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     POINT(安心ポイント 4つ)
+     ▼各ポイントの文言はここを編集してください
+============================================================ -->
+<section class="section" id="price-point">
+  <div class="section__inner">
+    <div class="section__head fade-in">
+      <p class="section__label">POINT</p>
+      <h2 class="section__title">
+        <span>安心して使える</span><br>
+        <span class="section__title-accent">4つの理由</span>
+      </h2>
+    </div>
+    <div class="about__features">
+      <div class="feature-card fade-in">
+        <span class="feature-card__icon" aria-hidden="true">
+          <!-- チェックマークアイコン -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>
+        </span>
+        <h3 class="feature-card__title">入会金・登録料 なし</h3><!-- ※仮の数値です。要確認 -->
+        <p class="feature-card__text">会員登録や年会費は不要です。思い立ったときに、どなたでもご利用いただけます。</p>
+      </div>
+      <div class="feature-card fade-in">
+        <span class="feature-card__icon" aria-hidden="true">
+          <!-- 時計アイコン -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        </span>
+        <h3 class="feature-card__title">必要なときに必要な分だけ</h3>
+        <p class="feature-card__text">定期契約の縛りはありません。スポットでの1回のご利用から柔軟に承ります。</p>
+      </div>
+      <div class="feature-card fade-in">
+        <span class="feature-card__icon" aria-hidden="true">
+          <!-- 書類(明細)アイコン -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h7M9 16h7"/></svg>
+        </span>
+        <h3 class="feature-card__title">明朗会計で安心</h3>
+        <p class="feature-card__text">シンプルな料金のしくみで、事前に費用の目安をお伝えします。あとから不明瞭な費用を請求することはありません。</p>
+      </div>
+      <div class="feature-card fade-in">
+        <span class="feature-card__icon" aria-hidden="true">
+          <!-- 人(ハート)アイコン -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+        </span>
+        <h3 class="feature-card__title">介護福祉士が対応</h3>
+        <p class="feature-card__text">現場経験を積んだ介護福祉士が、お一人おひとりの状況に合わせて責任を持って対応します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SYSTEM(料金の考え方 3ステップ)
+     ▼各ステップの文言・計算式はここを編集してください
+============================================================ -->
+<section class="section section--white" id="price-system">
+  <div class="section__inner">
+    <div class="section__head fade-in">
+      <p class="section__label">SYSTEM</p>
+      <h2 class="section__title">
+        <span>料金の</span><span class="section__title-accent">考え方</span>
+      </h2>
+    </div>
+    <ol class="flow__list flow__list--3col">
+      <li class="flow-step fade-in">
+        <span class="flow-step__num">01</span>
+        <h3 class="flow-step__title">基本料金</h3>
+        <p class="flow-step__text">サービスの内容とご利用時間によって決まります。</p>
+      </li>
+      <li class="flow-step fade-in">
+        <span class="flow-step__num">02</span>
+        <h3 class="flow-step__title">交通費</h3>
+        <p class="flow-step__text">ヘルパーの移動にかかる交通費（実費）を別途ご負担いただきます。</p>
+      </li>
+      <li class="flow-step fade-in">
+        <span class="flow-step__num">03</span>
+        <h3 class="flow-step__title">必要時のみ加算</h3>
+        <p class="flow-step__text">早朝・夜間・直前のご依頼など、該当する場合のみ加算をいただきます。</p>
+      </li>
+    </ol>
+    <!-- ▼計算式の一文 -->
+    <p class="price-formula fade-in">基本料金 × ご利用時間 ＋ 交通費（実費） ＋ 必要な場合のみ加算</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRICE(基本料金・加算・キャンセル料)
+     ▼料金を変更するときはここを編集してください
+============================================================ -->
+<section class="section" id="price-table">
+  <div class="section__inner">
+    <div class="section__head fade-in">
+      <p class="section__label">PRICE LIST</p>
+      <h2 class="section__title">
+        <span>基本</span><span class="section__title-accent">料金</span>
+      </h2>
+    </div>
+
+    <div class="price__table-wrap fade-in">
+      <table class="price__table">
+        <thead>
+          <tr><th>サービス</th><th>料金（税込）</th><th>備考</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>訪問介護サービス</td><td>4,000円〜 / 時間</td><td>別途交通費（実費）</td></tr>
+          <tr><td>介護付き旅行サービス</td><td>4,000円〜 / 時間</td><td>別途交通費（実費）</td></tr>
+          <tr><td>病院への付き添いサービス</td><td>3,500円 / 時間</td><td>別途交通費（実費）</td></tr>
+          <tr><td>結婚式付き添いサービス</td><td>4,000円 / 時間</td><td>別途交通費（実費）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="price__note fade-in">
+      ※いずれも別途交通費（実費）をご負担いただきます。<br>
+      サービスの内容や時間帯により料金が異なります。個別のニーズに合わせてオーダーメイドのプランをご提案いたします。
+    </p>
+
+    <!-- ▼加算料金(早朝・夜間・深夜・直前依頼・年末年始) -->
+    <h3 class="about__subtitle fade-in">加算料金</h3>
+    <p class="about__note fade-in">下記に該当する場合のみ、基本料金に加算をいただきます。</p>
+    <div class="price__table-wrap fade-in" style="margin-top: 32px;">
+      <table class="price__table">
+        <thead>
+          <tr><th>項目</th><th>加算</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>早朝（6時〜8時）</td><td>基本料金の25％<!-- ※仮の数値です。要確認 --></td></tr>
+          <tr><td>夜間（18時〜22時）</td><td>基本料金の25％<!-- ※仮の数値です。要確認 --></td></tr>
+          <tr><td>深夜（22時〜6時）</td><td>基本料金の50％<!-- ※仮の数値です。要確認 --></td></tr>
+          <tr><td>直前のご依頼（ご利用希望日時の48時間前以降）</td><td>基本料金の30％増</td></tr>
+          <tr><td>直前のご依頼（ご利用希望日時の24時間前以降）</td><td>基本料金の60％増</td></tr>
+          <tr><td>年末年始</td><td>基本料金の25％<!-- ※仮の数値です。要確認 --></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ▼キャンセル料の注記 -->
+    <p class="price__note fade-in">
+      【キャンセル料】当日キャンセル 100％ ／ 前日17時以降のキャンセル 50％<br>
+      キャンセルの際は必ずご連絡をお願いいたします。
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXAMPLE(ご利用料金の例)
+     ▼料金例はここを編集してください
+============================================================ -->
+<section class="section section--white" id="price-example">
+  <div class="section__inner">
+    <div class="section__head fade-in">
+      <p class="section__label">EXAMPLE</p>
+      <h2 class="section__title">
+        <span>ご利用料金の</span><span class="section__title-accent">例</span>
+      </h2>
+    </div>
+    <div class="example-grid">
+      <div class="example-card fade-in">
+        <h3 class="example-card__title">訪問介護サービスを3時間ご利用</h3>
+        <p class="example-card__calc">4,000円 × 3時間 ＝ 12,000円（税込）</p>
+        <p class="example-card__note">＋交通費（実費）</p>
+      </div>
+      <div class="example-card fade-in">
+        <h3 class="example-card__title">病院への付き添いを2時間ご利用</h3>
+        <p class="example-card__calc">3,500円 × 2時間 ＝ 7,000円（税込）</p>
+        <p class="example-card__note">＋交通費（実費）</p>
+      </div>
+    </div>
+    <p class="price__note fade-in">※加算に該当しない時間帯にご利用いただいた場合の例です。</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAYMENT(お支払いについて)
+     ▼お支払い方法を変更するときはここを編集してください
+============================================================ -->
+<section class="section" id="payment">
+  <div class="section__inner">
+    <div class="section__head fade-in">
+      <p class="section__label">PAYMENT</p>
+      <h2 class="section__title">
+        <span>お支払いに</span><span class="section__title-accent">ついて</span>
+      </h2>
+    </div>
+    <div class="area__card fade-in">
+      <p class="area__main">現金払い・クレジットカード払い・銀行振込</p>
+      <p class="area__note">上記のいずれかの方法でお支払いいただけます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTAバンド(お電話・メール)
+     ▼電話番号・メールアドレスを変更するときはここを編集してください
+============================================================ -->
+<section class="cta-band" id="contact-cta">
+  <div class="cta-band__inner fade-in">
+    <h2 class="cta-band__title">まずはお気軽にご相談ください</h2>
+    <p class="cta-band__text">介護保険では届かない「ちょっと助けて」に、まごころでお応えします。</p>
+    <div class="cta-band__buttons">
+      <a href="tel:09054344573" class="btn btn--white btn--large">
+        <span class="cta-band__tel-label">お電話でのご相談</span>
+        <span class="cta-band__tel-number">090-5434-4573</span>
+      </a>
+      <a href="mailto:watami783@gmail.com" class="btn btn--outline-white btn--large">メールで相談する</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER(フッター)
+     ▼フッターのメニュー・リンクはここを編集してください
+============================================================ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <p class="footer__logo">かいごのスキマ</p>
+    <p class="footer__area">対応地域：川崎市・横浜市・東京都内</p>
+    <nav class="footer__nav" aria-label="フッターメニュー">
+      <a href="index.html">トップ</a>
+      <a href="index.html#concept">コンセプト</a>
+      <a href="index.html#service">サービス紹介</a>
+      <a href="index.html#flow">ご利用の流れ</a>
+      <a href="price.html">料金体系</a>
+      <a href="index.html#faq">よくあるご質問</a>
+      <a href="index.html#message">代表挨拶</a>
+      <a href="recruit.html">求人</a>
+      <a href="index.html#contact">お問い合わせ</a>
+    </nav>
+    <!-- Facebookリンク -->
+    <a href="https://www.facebook.com/tadashi.osaka.9" class="footer__sns" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.5-3.92 3.78-3.92 1.1 0 2.24.2 2.24.2v2.47H15.2c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.9h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg>
+      <span>Facebook</span>
+    </a>
+    <p class="footer__copy">&copy; かいごのスキマ</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     右下の固定フローティングボタン
+     ▼「LINEで相談」を使う場合は、下の href="#contact-cta" を
+     あなたのLINE公式アカウントのURL(https://lin.ee/〜)に
+     書き換えてください ※現在は仮リンク(ページ下部のご相談バンドに移動)です
+============================================================ -->
+<div class="floating-cta">
+  <!-- ※仮文言・仮リンク: LINE公式アカウント開設後にURLを差し替えてください -->
+  <a href="#contact-cta" class="floating-cta__btn floating-cta__btn--line">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.48 3 2 6.64 2 11.1c0 3.99 3.54 7.33 8.32 7.97.32.07.77.21.88.49.1.25.07.65.03.9l-.14.86c-.04.25-.2 1 .87.54 1.07-.45 5.77-3.4 7.87-5.82C21.28 14.5 22 12.9 22 11.1 22 6.64 17.52 3 12 3z"/></svg>
+    <span>LINEで相談</span>
+  </a>
+  <a href="index.html#contact" class="floating-cta__btn floating-cta__btn--contact">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+    <span>お問い合わせ</span>
+  </a>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
