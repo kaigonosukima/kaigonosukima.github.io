@@ -80,7 +80,11 @@
        まるごとコピーして、いちばん上に貼り、中身を書き換えます
 
        YouTubeのアドレスが https://youtu.be/XXXXXXXX のとき、
-       iframe の src は https://www.youtube-nocookie.com/embed/XXXXXXXX にします
+       ・サムネイル画像は https://i.ytimg.com/vi/XXXXXXXX/maxresdefault.jpg を
+         images/media/ に保存して img の src にします
+       ・a の href は https://youtu.be/XXXXXXXX にします
+       （動画をページ内で再生する埋め込みは、パソコン上のファイルで開くと
+         「エラー153」になるため、サムネイル＋クリックでYouTubeを開く形にしています）
 ============================================================ -->
 <section class="section">
   <div class="section__inner section__inner--narrow">
@@ -88,15 +92,10 @@
 
       <!-- ============ クラウドケア様との対談動画 ============ -->
       <article class="media-item fade-in">
-        <div class="media-item__video">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/6ey8PCJXChQ?rel=0"
-            title="「車椅子の親を旅行に連れて行きたい…」介護旅行のプロが教える安全で楽しい旅行の作り方"
-            loading="lazy"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen></iframe>
-        </div>
+        <a class="media-item__video media-item__thumb" href="https://youtu.be/6ey8PCJXChQ" target="_blank" rel="noopener noreferrer" aria-label="YouTubeで動画を見る（新しいタブで開きます）">
+          <img src="images/media/crowdcare-taidan.jpg" alt="介護旅行 これ準備してますか？ 逢坂忠士とクラウドケア代表 小嶋潤一さんの対談動画" loading="lazy" width="1280" height="720">
+          <span class="media-item__play" aria-hidden="true"></span>
+        </a>
         <div class="media-item__body">
           <p class="work-card__meta">
             <span class="work-card__cat">対談動画</span>

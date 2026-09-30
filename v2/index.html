@@ -586,14 +586,12 @@
 <!-- ============================================================
      CONTACT(お問い合わせフォーム)
      ▼案内文・項目名はここを編集してください
-     【フォーム送信の設定方法】
-     このフォームは静的サイトのため、そのままでは送信されません。
-     実際に受信するには次のいずれかに差し替えてください。
-       方法1: Googleフォームを作成し、このセクションのform全体を
-              Googleフォームの「埋め込みHTML」(iframe)に置き換える
-       方法2: formspree.io などのフォーム送信サービスに登録し、
-              下の action="#" を action="https://formspree.io/f/あなたのID"
-              method="POST" に書き換える
+
+     【送信先の設定】
+     送信された内容は、Googleスプレッドシート
+     「かいごのスキマ_お問い合わせ管理」に自動で記録されます。
+     送信先のアドレスは、このすぐ下の js/script.js ではなく
+     ページ下部の <script> の中の FORM_URL に書いてあります。
 ============================================================ -->
 <section class="section section--white" id="contact">
   <div class="section__inner section__inner--narrow">
@@ -607,11 +605,11 @@
     <p class="contact__lead fade-in">
       当ホームページをご覧いただき、ありがとうございます。<br>
       お問い合わせの方は、下記のフォームに必要事項をご入力いただき、送信してください。<br>
-      お問い合わせ内容を確認させていただき、数日以内にメールにてご返信いたします。
+      内容を確認のうえ、2日以内に逢坂よりご連絡いたします。
     </p>
     <p class="contact__required-note fade-in"><span class="required">必須</span> は入力必須です</p>
 
-    <form class="contact__form fade-in" action="#" method="post">
+    <form class="contact__form fade-in" id="contactForm" method="post" novalidate>
       <div class="form-row">
         <label for="name" class="form-row__label">お名前<span class="required">必須</span></label>
         <input type="text" id="name" name="name" required autocomplete="name" placeholder="例）介護 太郎">
@@ -636,10 +634,34 @@
         <label for="body" class="form-row__label">お問い合わせ内容<span class="required">必須</span></label>
         <textarea id="body" name="body" rows="6" required placeholder="ご希望のサービスやご相談内容をご記入ください"></textarea>
       </div>
-      <div class="contact__submit">
-        <button type="submit" class="btn btn--accent btn--large">送信する</button>
+
+      <!-- 迷惑メール対策：人には見えません。消さないでください -->
+      <div class="form-honeypot" aria-hidden="true">
+        <label for="company">会社名（入力しないでください）</label>
+        <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
       </div>
+
+      <p class="contact__privacy">
+        ご記入いただいた内容は、ご返信とご相談の目的以外には使用いたしません。
+      </p>
+
+      <div class="contact__submit">
+        <button type="submit" class="btn btn--accent btn--large" id="contactSubmit">送信する</button>
+      </div>
+
+      <p class="contact__status" id="contactStatus" role="status" aria-live="polite"></p>
     </form>
+
+    <!-- 送信が終わったあとに出るお礼 -->
+    <div class="contact__thanks" id="contactThanks" hidden>
+      <p class="contact__thanks-title">送信いたしました。ありがとうございます。</p>
+      <p class="contact__thanks-text">
+        ご入力いただいたメールアドレス宛に、受付の控えをお送りしました。<br>
+        内容を確認のうえ、2日以内に逢坂よりご連絡いたします。<br>
+        お急ぎの場合は、お電話でもご相談いただけます。
+      </p>
+      <p class="contact__thanks-tel"><a href="tel:09054344573">090-5434-4573</a></p>
+    </div>
   </div>
 </section>
 
@@ -714,5 +736,56 @@
 </div>
 
 <script src="js/script.js"></script>
+
+<!-- ============================================================
+     お問い合わせフォームの送信
+     ▼下の FORM_URL の「ここにURLを貼る」の部分を、
+       Googleで作った受け取りアドレス（https://script.google.com/… ）
+       に置き換えてください。それ以外はさわらないでください
+============================================================ -->
+<script>
+(function () {
+  var FORM_URL = 'https://script.google.com/macros/s/AKfycbzs8fwDkiFRzOJG_PRzRN0DtDkfhOAPFVbRWac2jlSPaS6TN3AyWxWOcUOMmFL7rcNk/exec';
+
+  var form   = document.getElementById('contactForm');
+  var btn    = document.getElementById('contactSubmit');
+  var status = document.getElementById('contactStatus');
+  var thanks = document.getElementById('contactThanks');
+  if (!form) return;
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+
+    // 入力漏れのチェック
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    if (FORM_URL.indexOf('script.google.com') === -1) {
+      status.textContent = '送信先が設定されていません。お手数ですがお電話ください。';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = '送信しています…';
+    status.textContent = '';
+
+    var data = new URLSearchParams(new FormData(form));
+
+    fetch(FORM_URL, { method: 'POST', mode: 'no-cors', body: data })
+      .then(function () {
+        form.hidden = true;
+        thanks.hidden = false;
+        thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = '送信する';
+        status.textContent = '送信できませんでした。お手数ですが、お電話（090-5434-4573）にてご連絡ください。';
+      });
+  });
+})();
+</script>
+
 </body>
 </html>
