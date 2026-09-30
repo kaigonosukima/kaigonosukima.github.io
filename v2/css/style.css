@@ -2028,6 +2028,53 @@ section[id], footer[id] {
   border: 0;
 }
 
+/* サムネイル＋再生ボタン。クリックでYouTubeを開きます */
+.media-item__thumb {
+  display: block;
+}
+
+.media-item__thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s ease;
+}
+
+.media-item__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 76px;
+  height: 54px;
+  transform: translate(-50%, -50%);
+  border-radius: 14px;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: background-color 0.2s ease;
+}
+
+.media-item__play::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.media-item__thumb:hover img,
+.media-item__thumb:focus-visible img {
+  opacity: 0.88;
+}
+
+.media-item__thumb:hover .media-item__play,
+.media-item__thumb:focus-visible .media-item__play {
+  background-color: #f00;
+}
+
 .media-item__body {
   padding: 30px 36px 34px;
   display: flex;
@@ -2086,5 +2133,82 @@ section[id], footer[id] {
   }
   .media-item__body {
     padding: 22px 22px 26px;
+  }
+}
+
+/* ============================================================
+   お問い合わせフォームの追加分（2026年9月29日）
+============================================================ */
+
+/* 迷惑メール対策の欄。人の目には見えません */
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact__privacy {
+  margin-top: 18px;
+  font-size: 0.82rem;
+  line-height: 1.9;
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.contact__status {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #C0392B;
+  line-height: 1.8;
+}
+
+.contact__status:empty {
+  margin-top: 0;
+}
+
+/* 送信後のお礼 */
+.contact__thanks {
+  text-align: center;
+  background-color: var(--color-accent-pale);
+  border-radius: var(--radius-card);
+  padding: 46px 32px;
+}
+
+.contact__thanks-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  font-weight: 700;
+  color: var(--color-accent-dark);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.contact__thanks-text {
+  font-size: 0.95rem;
+  line-height: 2.05;
+}
+
+.contact__thanks-tel {
+  margin-top: 20px;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.contact__thanks-tel a {
+  color: var(--color-accent-dark);
+}
+
+@media (max-width: 768px) {
+  .contact__thanks {
+    padding: 32px 20px;
+  }
+  .contact__thanks-tel {
+    font-size: 1.3rem;
   }
 }
