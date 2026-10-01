@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
 
+  <!-- ▼確認用のページです。Googleなどの検索結果に出さない設定。
+       本番（kaigonosukima.com のトップ）に移すときは、この2行を必ず消してください -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="top">
@@ -23,7 +25,10 @@
 <header class="header">
   <div class="header__inner">
     <!-- サイト名(テキストロゴ) -->
-    <a href="index.html" class="header__logo">かいごのスキマ</a>
+    <a href="index.html" class="header__logo">
+      <img src="images/logo-mark.png" alt="" class="header__logo-mark" width="138" height="138">
+      <span class="header__logo-text">かいごのスキマ</span>
+    </a>
 
     <!-- ハンバーガーボタン(スマホ用) -->
     <button class="header__hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="globalNav">
@@ -34,6 +39,9 @@
       <ul class="nav__list">
         <li><a href="index.html" class="nav__link">トップ</a></li>
         <li><a href="index.html#concept" class="nav__link">コンセプト</a></li>
+        <li><a href="works.html" class="nav__link">旅の記録</a></li>
+        <li><a href="index.html#voice" class="nav__link">お客様の声</a></li>
+        <li><a href="media.html" class="nav__link">記事・動画</a></li>
         <!-- サービス紹介(ドロップダウン) -->
         <li class="nav__item--dropdown">
           <a href="index.html#service" class="nav__link nav__link--dropdown">サービス紹介<span class="nav__arrow" aria-hidden="true"></span></a>
@@ -45,9 +53,7 @@
           </ul>
         </li>
         <li><a href="index.html#flow" class="nav__link">ご利用の流れ</a></li>
-        <li><a href="price.html" class="nav__link">料金体系</a></li>
-        <li><a href="index.html#faq" class="nav__link">よくあるご質問</a></li>
-        <li><a href="index.html#message" class="nav__link">代表挨拶</a></li>
+        <li><a href="index.html#faq" class="nav__link">よくある質問</a></li>
         <li><a href="recruit.html" class="nav__link is-current" aria-current="page">求人</a></li>
         <li class="nav__cta"><a href="index.html#contact" class="btn btn--accent btn--nav">お問い合わせ</a></li>
       </ul>
@@ -280,14 +286,18 @@
 ============================================================ -->
 <footer class="footer">
   <div class="footer__inner">
-    <p class="footer__logo">かいごのスキマ</p>
+    <p class="footer__logo">
+      <img src="images/logo.png" alt="かいごのスキマ" class="footer__logo-img" width="140" height="216">
+    </p>
     <p class="footer__area">対応地域：川崎市・横浜市・東京都内</p>
     <nav class="footer__nav" aria-label="フッターメニュー">
       <a href="index.html">トップ</a>
       <a href="index.html#concept">コンセプト</a>
+      <a href="works.html">旅の記録</a>
+      <a href="index.html#voice">お客様の声</a>
+      <a href="media.html">記事・動画</a>
       <a href="index.html#service">サービス紹介</a>
       <a href="index.html#flow">ご利用の流れ</a>
-      <a href="price.html">料金体系</a>
       <a href="index.html#faq">よくあるご質問</a>
       <a href="index.html#message">代表挨拶</a>
       <a href="recruit.html">求人</a>

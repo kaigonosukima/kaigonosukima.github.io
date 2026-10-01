@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
 
+  <!-- ▼確認用のページです。Googleなどの検索結果に出さない設定。
+       本番（kaigonosukima.com のトップ）に移すときは、この2行を必ず消してください -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="top">
@@ -23,7 +25,10 @@
 <header class="header">
   <div class="header__inner">
     <!-- サイト名(テキストロゴ) -->
-    <a href="#top" class="header__logo">かいごのスキマ</a>
+    <a href="#top" class="header__logo">
+      <img src="images/logo-mark.png" alt="" class="header__logo-mark" width="138" height="138">
+      <span class="header__logo-text">かいごのスキマ</span>
+    </a>
 
     <!-- ハンバーガーボタン(スマホ用) -->
     <button class="header__hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="globalNav">
@@ -34,6 +39,9 @@
       <ul class="nav__list">
         <li><a href="#top" class="nav__link">トップ</a></li>
         <li><a href="#concept" class="nav__link">コンセプト</a></li>
+        <li><a href="works.html" class="nav__link">旅の記録</a></li>
+        <li><a href="#voice" class="nav__link">お客様の声</a></li>
+        <li><a href="media.html" class="nav__link">記事・動画</a></li>
         <!-- サービス紹介(ドロップダウン) -->
         <li class="nav__item--dropdown">
           <a href="#service" class="nav__link nav__link--dropdown">サービス紹介<span class="nav__arrow" aria-hidden="true"></span></a>
@@ -45,9 +53,7 @@
           </ul>
         </li>
         <li><a href="#flow" class="nav__link">ご利用の流れ</a></li>
-        <li><a href="price.html" class="nav__link">料金体系</a></li>
-        <li><a href="#faq" class="nav__link">よくあるご質問</a></li>
-        <li><a href="#message" class="nav__link">代表挨拶</a></li>
+        <li><a href="#faq" class="nav__link">よくある質問</a></li>
         <li><a href="recruit.html" class="nav__link">求人</a></li>
         <li class="nav__cta"><a href="#contact" class="btn btn--accent btn--nav">お問い合わせ</a></li>
       </ul>
@@ -178,27 +184,125 @@
 </section>
 
 <!-- ============================================================
-     GALLERY(活動の様子)
-     ▼写真を差し替える場合は images フォルダの gallery-1.svg 〜
-     gallery-6.svg を同名で置き換えてください
+     WORKS(旅の記録・実績)
+     ▼記録を1件ふやすときは、下の <article class="work-card"> を
+       まるごとコピーして、写真・日付・見出し・本文を書き換えます
+       トップページには新しい3件だけを置き、
+       すべての記録は works.html に載せます
 ============================================================ -->
-<section class="section" id="gallery">
+<section class="section section--works" id="works">
   <div class="section__inner">
     <div class="section__head fade-in">
-      <p class="section__label">GALLERY</p>
+      <p class="section__label">WORKS</p>
       <h2 class="section__title">
-        <span>一人ひとりの想いに</span><br>
-        <span class="section__title-accent">寄り添う場面</span>
+        <span>ご一緒した</span><span class="section__title-accent">旅の記録</span>
       </h2>
+      <p class="section__lead">実際にご依頼をいただき、ご一緒させていただいた外出・旅行の記録です。<br class="u-pc">ご本人様・ご家族様の許可をいただいたうえで掲載しています。</p>
     </div>
-    <div class="gallery__grid">
-      <figure class="gallery__item fade-in"><img src="images/gallery-1.svg" alt="旅行付き添いの様子"><figcaption>旅行付き添い</figcaption></figure>
-      <figure class="gallery__item fade-in"><img src="images/gallery-2.svg" alt="外出支援の様子"><figcaption>外出支援</figcaption></figure>
-      <figure class="gallery__item fade-in"><img src="images/gallery-3.svg" alt="通院付き添いの様子"><figcaption>通院付き添い</figcaption></figure>
-      <figure class="gallery__item fade-in"><img src="images/gallery-4.svg" alt="在宅ケアの様子"><figcaption>在宅ケア</figcaption></figure>
-      <figure class="gallery__item fade-in"><img src="images/gallery-5.svg" alt="イベント付き添いの様子"><figcaption>イベント付き添い</figcaption></figure>
-      <figure class="gallery__item fade-in"><img src="images/gallery-6.svg" alt="日常生活支援の様子"><figcaption>日常生活支援</figcaption></figure>
+
+    <div class="works__grid">
+
+      <!-- ── 記録3: 鉄道博物館 ── -->
+      <article class="work-card fade-in">
+        <div class="work-card__img">
+          <img src="images/works/tetsudo-1.jpg" alt="鉄道博物館で蒸気機関車の展示をご覧になっている様子" loading="lazy">
+        </div>
+        <div class="work-card__body">
+          <p class="work-card__meta">
+            <span class="work-card__cat">外出支援</span>
+            <span class="work-card__term">日帰り</span>
+            <time class="work-card__date" datetime="2026-06-18">2026.06.18</time>
+          </p>
+          <h3 class="work-card__title">大好きな鉄道を、一日かけて</h3>
+          <p class="work-card__text">NPO法人様からのご依頼で、障害のある57歳の男性と一日ご一緒しました。グループホームへお迎えにあがり、大宮シャトルで博物館へ。ご本人のペースに合わせて展示を巡り、おやつのアップルパイまで。</p>
+          <p class="work-card__place">埼玉県さいたま市 鉄道博物館（大宮）</p>
+        </div>
+      </article>
+
+      <!-- ── 記録1: 箱根 ── -->
+      <article class="work-card fade-in">
+        <div class="work-card__img work-card__img--lower">
+          <img src="images/works/hakone-fuji.jpg" alt="芦ノ湖のほとりから富士山をながめるご利用者様とスタッフ" loading="lazy">
+        </div>
+        <div class="work-card__body">
+          <p class="work-card__meta">
+            <span class="work-card__cat">介護付き旅行</span>
+            <span class="work-card__term">1泊2日</span>
+            <time class="work-card__date" datetime="2026-05-26">2026.05.26–27</time>
+          </p>
+          <h3 class="work-card__title">芦ノ湖から富士山を見た、1泊2日の箱根</h3>
+          <p class="work-card__text">92歳のご利用者様と、娘様ご夫婦に同行しました。芦ノ湖から富士山が見えた瞬間、ぱっと表情が明るくなって。2日目の海賊船では、車椅子からすっと立ち上がり、ご自分の目で富士山を見つめられました。</p>
+          <p class="work-card__place">神奈川県 箱根町（東京駅 → 小田原 → 芦ノ湖）</p>
+        </div>
+      </article>
+
+      <!-- ── 記録2: 柴又 ── -->
+      <article class="work-card fade-in">
+        <div class="work-card__img">
+          <img src="images/works/shibamata.jpg" alt="柴又の門前でご両親とご一緒したときの様子" loading="lazy">
+        </div>
+        <div class="work-card__body">
+          <p class="work-card__meta">
+            <span class="work-card__cat">外出支援</span>
+            <span class="work-card__term">日帰り</span>
+            <time class="work-card__date" datetime="2026-05-24">2026.05.24</time>
+          </p>
+          <h3 class="work-card__title">何十年ぶりかに、三人で同じ景色を</h3>
+          <p class="work-card__text">娘様からのご依頼で、離れて暮らすお父様とお母様を、ご一緒にお連れしました。車椅子での参道歩き、あじさいの咲く境内。「来られてよかった」——その一言が、すべてでした。</p>
+          <p class="work-card__place">東京都葛飾区 柴又帝釈天・寅さん記念館</p>
+        </div>
+      </article>
+
     </div>
+
+    <p class="works__more fade-in">
+      <a href="works.html" class="btn btn--outline btn--large">旅の記録をもっと見る</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     VOICE(お客様の声)
+     ▼実際にいただいたお言葉です。作った言葉は入れないでください
+       1つふやすときは <figure class="voice-card"> をコピーします
+============================================================ -->
+<section class="section section--white" id="voice">
+  <div class="section__inner">
+    <div class="section__head fade-in">
+      <p class="section__label">VOICE</p>
+      <h2 class="section__title">
+        <span>いただいた</span><span class="section__title-accent">お言葉</span>
+      </h2>
+      <p class="section__lead">旅の終わりに、ご本人様・ご家族様からいただいた言葉です。<br class="u-pc">許可をいただいたものだけを、そのまま載せています。</p>
+    </div>
+
+    <div class="voice__grid">
+
+      <figure class="voice-card fade-in">
+        <blockquote class="voice-card__quote">あなたに頼んで<br>本当によかった</blockquote>
+        <figcaption class="voice-card__by">ご高齢のご夫婦／軽井沢 7泊8日</figcaption>
+      </figure>
+
+      <figure class="voice-card fade-in">
+        <blockquote class="voice-card__quote">旅行なんて、<br>もうできないと思ってた</blockquote>
+        <figcaption class="voice-card__by">1年ぶりの外出／東北鉄道 2泊3日</figcaption>
+      </figure>
+
+      <figure class="voice-card fade-in">
+        <blockquote class="voice-card__quote">来てよかった。<br>次回はもう少し距離をのばせそう</blockquote>
+        <figcaption class="voice-card__by">92歳のお母様と娘様ご夫婦／箱根 1泊2日</figcaption>
+      </figure>
+
+      <figure class="voice-card fade-in">
+        <blockquote class="voice-card__quote">声で景色が<br>見えた気がした</blockquote>
+        <figcaption class="voice-card__by">視覚障害のある方／静岡 2泊3日</figcaption>
+      </figure>
+
+    </div>
+
+    <p class="voice__more fade-in">
+      <a href="works.html" class="btn btn--outline btn--large">それぞれの旅の記録を読む</a>
+    </p>
   </div>
 </section>
 
@@ -229,7 +333,6 @@
           <p class="service-card__text">
             有資格者の介護スタッフが同行し、移動や宿泊をサポート。車いす対応の宿泊施設や観光地のご提案から旅行計画まで、ご家族様も一緒に楽しめる旅をお手伝いします。視覚障害や肢体不自由のある方の「旅をしたい」という夢も、ユニバーサルツーリズムの専門的な知見でサポート。画一的なパッケージツアーではなく、お客様のご希望や身体状況に合わせたオーダーメイドの旅をご提案します。
           </p>
-          <p class="service-card__price"><span class="service-card__price-label">料金</span>4,000円（税込）〜 / 時間<span class="service-card__price-note">（別途交通費）</span></p>
         </div>
       </article>
 
@@ -241,31 +344,28 @@
           <p class="service-card__text">
             訪問介護ヘルパーがご自宅を訪問し、日常生活をサポートします。食事介助・排泄介助などの介護サービス、杖歩行・車椅子介助などの移動サービス、料理・洗濯などの家事サービスに対応。買い物の代行、外出の付き添い、お話し相手、ペットの世話、認知症の方の見守りなども組み合わせられます。初回訪問時にご本人様・ご家族様のご希望を丁寧にお伺いし、適切な支援をご提案します。
           </p>
-          <p class="service-card__price"><span class="service-card__price-label">料金</span>4,000円（税込）〜 / 時間<span class="service-card__price-note">（別途交通費）</span></p>
         </div>
       </article>
 
       <!-- ── サービス3: 病院への付き添いサービス ── -->
       <article class="service-card fade-in" id="service-hospital">
-        <div class="service-card__img"><img src="images/service-3.svg" alt="病院への付き添いサービス"></div>
+        <div class="service-card__img"><img src="images/works/photo-soon.svg" alt="病院への付き添いサービス（写真を準備中です）"></div>
         <div class="service-card__body">
           <h3 class="service-card__title">病院への付き添いサービス</h3>
           <p class="service-card__text">
             ご自宅と病院の往復、時間のよめない診察、受診時のお医者さんから伺ったお話など、ご一緒させていただきご様子をお伝えします。外来受診時の同行、院内での移動介助、診察の立ち会い、医師や看護師からの説明の記録、薬の受け取りにも対応。入院時・入院中・一時退院時の身のまわりのお世話も、ご家族に代わってお手伝いします。
           </p>
-          <p class="service-card__price"><span class="service-card__price-label">料金</span>3,500円（税込）/ 時間<span class="service-card__price-note">（別途交通費）</span></p>
         </div>
       </article>
 
       <!-- ── サービス4: 結婚式付き添いサービス ── -->
       <article class="service-card service-card--reverse fade-in" id="service-wedding">
-        <div class="service-card__img"><img src="images/service-wedding.svg" alt="結婚式付き添いサービス"></div>
+        <div class="service-card__img"><img src="images/works/photo-soon.svg" alt="結婚式付き添いサービス（写真を準備中です）"></div>
         <div class="service-card__body">
           <h3 class="service-card__title">結婚式付き添いサービス</h3>
           <p class="service-card__text">
             「お子様やお孫様の結婚式に出席したい」──体調や移動への不安から、大切な一日をあきらめかけていませんか。ご自宅から式場までの移動、会場内での車いす介助やお手洗いの介助、披露宴中のさりげない見守り・体調確認、お食事のサポートまで、介護のプロが晴れの日にまごころを込めて付き添います。ご本人様にもご家族様にも、安心して式に集中していただけます。前撮りやご親族としての参列にも対応します。
           </p>
-          <p class="service-card__price"><span class="service-card__price-label">料金</span>4,000円（税込）/ 時間<span class="service-card__price-note">（別途交通費）</span></p>
         </div>
       </article>
 
@@ -311,38 +411,49 @@
 </section>
 
 <!-- ============================================================
-     PRICE(料金表)
-     ▼料金を変更するときはここを編集してください
+     PRICE(料金について)
+     ▼2026年9月22日 方針変更：
+       ホームページに料金は載せません。一般のお客様には個別にお見積もりします。
+       金額を書き足したくなったときは、この方針を決めた理由を思い出してください
 ============================================================ -->
 <section class="section section--white" id="price">
-  <div class="section__inner">
+  <div class="section__inner section__inner--narrow">
     <div class="section__head fade-in">
       <p class="section__label">PRICE</p>
       <h2 class="section__title">
-        <span>料金の</span><span class="section__title-accent">ご案内</span>
+        <span>料金について</span>
       </h2>
     </div>
 
-    <div class="price__table-wrap fade-in">
-      <table class="price__table">
-        <thead>
-          <tr><th>サービス</th><th>料金（税込）</th><th>備考</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>介護付き旅行サービス</td><td>4,000円〜 / 時間</td><td>別途交通費</td></tr>
-          <tr><td>訪問介護サービス</td><td>4,000円〜 / 時間</td><td>別途交通費</td></tr>
-          <tr><td>病院への付き添いサービス</td><td>3,500円 / 時間</td><td>別途交通費</td></tr>
-          <tr><td>結婚式付き添いサービス</td><td>4,000円 / 時間</td><td>別途交通費</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="price__note fade-in">
-      ※上記は概算です。サービスの内容や時間帯によって料金が異なります。<br>
-      個別のニーズに合わせてオーダーメイドなプランをご提案いたします。詳しくはお問い合わせください。
+    <p class="about__lead fade-in">
+      かいごのスキマでは、ホームページに一律の料金表を掲げておりません。<br>
+      お身体の状況も、行き先も、ご一緒する時間も、お一人おひとり違うからです。
     </p>
-    <!-- ▼料金体系の詳細ページへのボタン -->
+
+    <div class="price-policy fade-in">
+      <div class="price-policy__item">
+        <h3 class="price-policy__title">お一人おひとり、お見積もりします</h3>
+        <p class="price-policy__text">ご希望とお身体の状況をうかがったうえで、必要な人数・時間・移動の方法を組み立て、お見積もりをお出しします。決まったパッケージに当てはめることはいたしません。</p>
+      </div>
+      <div class="price-policy__item">
+        <h3 class="price-policy__title">初回のご相談は無料です</h3>
+        <p class="price-policy__text">「こんなこと頼めるだろうか」という段階で構いません。行き先が決まっていなくても、ご相談だけで終わっても、費用はいただきません。</p>
+      </div>
+      <div class="price-policy__item">
+        <h3 class="price-policy__title">お金をお預かりしません</h3>
+        <p class="price-policy__text">現金や通帳をお預かりする業務は承っておりません。旅費や入場料などの実費は、原則ご本人様・ご家族様にお支払いいただきます。</p>
+      </div>
+      <div class="price-policy__item">
+        <h3 class="price-policy__title">お見積もりは、書面でお渡しします</h3>
+        <p class="price-policy__text">内訳のわかる形でお出しし、ご家族にも同じものをお渡しします。あとから追加の費用が出る可能性がある場合は、先にお伝えします。</p>
+      </div>
+    </div>
+
+    <p class="price__note fade-in">
+      ご相談・お見積もりのご依頼は、お電話またはお問い合わせフォームから承っております。
+    </p>
     <div class="price__more fade-in">
-      <a href="price.html" class="btn btn--accent">詳しい料金体系はこちら</a>
+      <a href="#contact" class="btn btn--accent">お見積もりを相談する</a>
     </div>
   </div>
 </section>
@@ -474,14 +585,12 @@
 <!-- ============================================================
      CONTACT(お問い合わせフォーム)
      ▼案内文・項目名はここを編集してください
-     【フォーム送信の設定方法】
-     このフォームは静的サイトのため、そのままでは送信されません。
-     実際に受信するには次のいずれかに差し替えてください。
-       方法1: Googleフォームを作成し、このセクションのform全体を
-              Googleフォームの「埋め込みHTML」(iframe)に置き換える
-       方法2: formspree.io などのフォーム送信サービスに登録し、
-              下の action="#" を action="https://formspree.io/f/あなたのID"
-              method="POST" に書き換える
+
+     【送信先の設定】
+     送信された内容は、Googleスプレッドシート
+     「かいごのスキマ_お問い合わせ管理」に自動で記録されます。
+     送信先のアドレスは、このすぐ下の js/script.js ではなく
+     ページ下部の <script> の中の FORM_URL に書いてあります。
 ============================================================ -->
 <section class="section section--white" id="contact">
   <div class="section__inner section__inner--narrow">
@@ -495,11 +604,11 @@
     <p class="contact__lead fade-in">
       当ホームページをご覧いただき、ありがとうございます。<br>
       お問い合わせの方は、下記のフォームに必要事項をご入力いただき、送信してください。<br>
-      お問い合わせ内容を確認させていただき、数日以内にメールにてご返信いたします。
+      内容を確認のうえ、2日以内に逢坂よりご連絡いたします。
     </p>
     <p class="contact__required-note fade-in"><span class="required">必須</span> は入力必須です</p>
 
-    <form class="contact__form fade-in" action="#" method="post">
+    <form class="contact__form fade-in" id="contactForm" method="post" novalidate>
       <div class="form-row">
         <label for="name" class="form-row__label">お名前<span class="required">必須</span></label>
         <input type="text" id="name" name="name" required autocomplete="name" placeholder="例）介護 太郎">
@@ -524,10 +633,34 @@
         <label for="body" class="form-row__label">お問い合わせ内容<span class="required">必須</span></label>
         <textarea id="body" name="body" rows="6" required placeholder="ご希望のサービスやご相談内容をご記入ください"></textarea>
       </div>
-      <div class="contact__submit">
-        <button type="submit" class="btn btn--accent btn--large">送信する</button>
+
+      <!-- 迷惑メール対策：人には見えません。消さないでください -->
+      <div class="form-honeypot" aria-hidden="true">
+        <label for="company">会社名（入力しないでください）</label>
+        <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
       </div>
+
+      <p class="contact__privacy">
+        ご記入いただいた内容は、ご返信とご相談の目的以外には使用いたしません。
+      </p>
+
+      <div class="contact__submit">
+        <button type="submit" class="btn btn--accent btn--large" id="contactSubmit">送信する</button>
+      </div>
+
+      <p class="contact__status" id="contactStatus" role="status" aria-live="polite"></p>
     </form>
+
+    <!-- 送信が終わったあとに出るお礼 -->
+    <div class="contact__thanks" id="contactThanks" hidden>
+      <p class="contact__thanks-title">送信いたしました。ありがとうございます。</p>
+      <p class="contact__thanks-text">
+        ご入力いただいたメールアドレス宛に、受付の控えをお送りしました。<br>
+        内容を確認のうえ、2日以内に逢坂よりご連絡いたします。<br>
+        お急ぎの場合は、お電話でもご相談いただけます。
+      </p>
+      <p class="contact__thanks-tel"><a href="tel:09054344573">090-5434-4573</a></p>
+    </div>
   </div>
 </section>
 
@@ -557,14 +690,18 @@
 ============================================================ -->
 <footer class="footer">
   <div class="footer__inner">
-    <p class="footer__logo">かいごのスキマ</p>
+    <p class="footer__logo">
+      <img src="images/logo.png" alt="かいごのスキマ" class="footer__logo-img" width="140" height="216">
+    </p>
     <p class="footer__area">対応地域：川崎市・横浜市・東京都内</p>
     <nav class="footer__nav" aria-label="フッターメニュー">
       <a href="#top">トップ</a>
       <a href="#concept">コンセプト</a>
+      <a href="works.html">旅の記録</a>
+      <a href="#voice">お客様の声</a>
+      <a href="media.html">記事・動画</a>
       <a href="#service">サービス紹介</a>
       <a href="#flow">ご利用の流れ</a>
-      <a href="price.html">料金体系</a>
       <a href="#faq">よくあるご質問</a>
       <a href="#message">代表挨拶</a>
       <a href="recruit.html">求人</a>
@@ -598,5 +735,56 @@
 </div>
 
 <script src="js/script.js"></script>
+
+<!-- ============================================================
+     お問い合わせフォームの送信
+     ▼下の FORM_URL の「ここにURLを貼る」の部分を、
+       Googleで作った受け取りアドレス（https://script.google.com/… ）
+       に置き換えてください。それ以外はさわらないでください
+============================================================ -->
+<script>
+(function () {
+  var FORM_URL = 'https://script.google.com/macros/s/AKfycbzs8fwDkiFRzOJG_PRzRN0DtDkfhOAPFVbRWac2jlSPaS6TN3AyWxWOcUOMmFL7rcNk/exec';
+
+  var form   = document.getElementById('contactForm');
+  var btn    = document.getElementById('contactSubmit');
+  var status = document.getElementById('contactStatus');
+  var thanks = document.getElementById('contactThanks');
+  if (!form) return;
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+
+    // 入力漏れのチェック
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    if (FORM_URL.indexOf('script.google.com') === -1) {
+      status.textContent = '送信先が設定されていません。お手数ですがお電話ください。';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = '送信しています…';
+    status.textContent = '';
+
+    var data = new URLSearchParams(new FormData(form));
+
+    fetch(FORM_URL, { method: 'POST', mode: 'no-cors', body: data })
+      .then(function () {
+        form.hidden = true;
+        thanks.hidden = false;
+        thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = '送信する';
+        status.textContent = '送信できませんでした。お手数ですが、お電話（090-5434-4573）にてご連絡ください。';
+      });
+  });
+})();
+</script>
+
 </body>
 </html>
