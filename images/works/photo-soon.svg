@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="写真を準備中です">
+  <rect width="800" height="600" fill="#E4F1EE"/>
+  <g fill="none" stroke="#4FA6A0" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.75">
+    <rect x="288" y="248" width="224" height="160" rx="20"/>
+    <path d="M338 248l22-30h80l22 30"/>
+    <circle cx="400" cy="330" r="46"/>
+  </g>
+  <text x="400" y="470" text-anchor="middle" font-family="'Hiragino Mincho ProN','Yu Mincho',serif" font-size="30" fill="#4FA6A0" letter-spacing="4">写真を準備中です</text>
+</svg>
